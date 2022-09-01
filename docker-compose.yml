@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  next:
+    image: node:18
+    volumes:
+      - .:/src/
+    working_dir: /src/nextjs-blog
+    command: npm run dev
+    ports:
+      - '3000:3000'
